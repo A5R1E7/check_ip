@@ -15,6 +15,6 @@ def test_json():
 
 @app.route('/')
 def hello():
-     return app.send_static_file('index.html')
+    return 'Strona główna'
 if __name__=='__main__':
     app.run(debug=True, port=8000)
