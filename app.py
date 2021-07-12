@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, send_file,redirect,url_for, Response, redirect, jsonify
-from flask_accept import accept
 
 app = Flask(__name__,static_folder="static", template_folder="templates")
 
@@ -20,7 +19,6 @@ def test_json():
     return jsonify(Lista= IPList)
 
 @app.route('/')
-@accept('text/html/json/yaml')
 def hello():
     return render_template('templates/Frontpage.html')
 
