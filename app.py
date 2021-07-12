@@ -27,10 +27,11 @@ def test_json():
 @accept ('text/html') 
 def hello():
     return "Strona testowa"
-r = requests.get('https://api.github.com/user', auth=('user', 'pass'))
+r = requests.get('https://github.com/A5R1E7/check_ip.git', auth=('A5R1E7', 'Divingvatt1'))
 r.status_code
-r.headers['content-type']
+r.headers['application/json']
 r.encoding
 r.text
+r.json()
 if __name__ == "__main__":
     app.run(debug=True,host='0.0.0.0',port=8080)
