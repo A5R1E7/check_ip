@@ -19,7 +19,7 @@ def test_json():
 
 @app.route('/')
 def hello():
-    return "Strona główna"
+    return "Strona testowa"
 
 
 
