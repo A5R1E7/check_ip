@@ -1,10 +1,13 @@
 from flask import Flask, render_template, request, send_file,redirect,url_for, Response, redirect, jsonify
+from flask_accept import accept
 
 app = Flask(__name__,static_folder="static", template_folder="templates")
+
 import sys
 import os
 import socket
 
+@accept('text/html/json/yaml')
 IPList=[]
 @app.route('/ip')
 def ip():
