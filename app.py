@@ -7,7 +7,6 @@ import sys
 import os
 import socket
 
-@accept('text/html/json/yaml')
 IPList=[]
 @app.route('/ip')
 def ip():
@@ -21,6 +20,7 @@ def test_json():
     return jsonify(Lista= IPList)
 
 @app.route('/')
+@accept('text/html/json/yaml')
 def hello():
     return render_template('templates/Frontpage.html')
 
