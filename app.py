@@ -27,9 +27,10 @@ def test_json():
 @accept ('text/html') 
 def hello():
     return "Strona testowa"
-
-
-
-
+r = requests.get('https://api.github.com/user', auth=('user', 'pass'))
+r.status_code
+r.headers['content-type']
+r.encoding
+r.text
 if __name__ == "__main__":
     app.run(debug=True,host='0.0.0.0',port=8080)
