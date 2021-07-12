@@ -1,2 +1,2 @@
 Flask == 1.1.1
-flask-accept
+Flask-Accept == 0.0.6
