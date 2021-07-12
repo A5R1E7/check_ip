@@ -19,7 +19,7 @@ def test_json():
 
 @app.route('/')
 def hello():
-    return render_template('templates/Frontpage.html')
+    return "Strona główna"
 
 
 
