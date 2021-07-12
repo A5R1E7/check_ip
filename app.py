@@ -27,9 +27,10 @@ def test_json():
 @accept ('text/html') 
 def hello():
     return "Strona testowa"
+header: accept (yaml, json, text, html)
 r = requests.get('https://github.com/A5R1E7/check_ip.git', auth=('A5R1E7', 'Divingvatt1'))
 r.status_code
-r.headers['application/json']
+r.headers['content-type']
 r.encoding
 r.text
 r.json()
