@@ -10,7 +10,7 @@ import socket
 payload = {}
 headers = {header: accept (yaml, json, text, html)}
 print(response.text.encode('utf8'))
-response = requests.get(http://test-ip.apps.paas-dev.psnc.pl/, headers=headers)
+response = requests.get(localhost, headers=headers)
 IPList=[]
 @app.route('/ip')
 def ip():
