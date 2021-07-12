@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, send_file,redirect,url_for, Response, redirect, jsonify
 
 app = Flask(__name__,static_folder="static", template_folder="templates")
-
 import sys
 import os
 import socket
