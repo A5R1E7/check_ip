@@ -12,8 +12,15 @@ IPList=[]
 def hello():
     return "Strona testowa"
 @app.route('/ip')
-
+@accept('text/html')
 def ip():
+    h_name = socket.gethostname()
+    IP_address = socket.gethostbyname(h_name)
+    IPList.append(IP_address)
+    return "Twój adres IP:  " + IP_address
+
+@ip.support('application/json')
+def ip_json():
     h_name = socket.gethostname()
     IP_address = socket.gethostbyname(h_name)
     IPList.append(IP_address)
