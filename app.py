@@ -22,13 +22,13 @@ def ip():
 
 
 @app.route('/ip/list')
+def test():
+    return jsonify(Lista = IPList)
 
+
+@test_json.support('application/json')
 def test_json():
     return jsonify(Lista = IPList)
-@test_json.support('application/json')
-@test_json.support('application/yaml')
-
-
 
 
 if __name__ == "__main__":
