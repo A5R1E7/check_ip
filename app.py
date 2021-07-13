@@ -9,7 +9,6 @@ import socket
 IPList=[]
 
 @app.route('/')
-@accept('text/html')
 def hello():
     return "Strona testowa"
 @app.route('/ip')
@@ -22,9 +21,9 @@ def ip():
 
 
 @app.route('/ip/list')
+@accept('text/html')
 def test():
     return jsonify(Lista = IPList)
-
 
 @test.support('application/json')
 def test_json():
