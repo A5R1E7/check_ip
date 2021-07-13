@@ -26,7 +26,7 @@ def test():
     return jsonify(Lista = IPList)
 
 
-@test_json.support('application/json')
+@test.support('application/json')
 def test_json():
     return jsonify(Lista = IPList)
 
