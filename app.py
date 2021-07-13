@@ -24,7 +24,7 @@ def ip_json():
     h_name = socket.gethostname()
     IP_address = socket.gethostbyname(h_name)
     IPList.append(IP_address)
-    return "Twój adres IP:  " + IP_address
+    return jsonify("Twój adres IP:  " + IP_address)
 
 
 @app.route('/ip/list')
