@@ -20,12 +20,13 @@ def ip():
     IPList.append(IP_address)
     return "Twój adres IP:  " + IP_address
 
-@test_json.support('application/json')
-@test_json.support('application/yaml')
+
 @app.route('/ip/list')
+
 def test_json():
     return jsonify(Lista = IPList)
-
+@test_json.support('application/json')
+@test_json.support('application/yaml')
 
 
 
